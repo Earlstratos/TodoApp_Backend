@@ -10,7 +10,10 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://your-frontend-name.vercel.app", // ✅ must be exact
+    credentials: true
+  }));
 
 // Connect to DB
 const dbConnect = require("../Config/database");
