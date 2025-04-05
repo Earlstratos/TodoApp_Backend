@@ -11,9 +11,8 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({
-    origin: "https://your-frontend-name.vercel.app", // ✅ must be exact
-    credentials: true
-  }));
+  origin: "https://todo-app-frontend-mez61vfzq-satyams-projects-4e045015.vercel.app"
+}));
 
 // Connect to DB
 const dbConnect = require("../Config/database");
